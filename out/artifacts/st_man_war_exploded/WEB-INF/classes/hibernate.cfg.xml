@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE  hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="hibernate.connection.url">
+            jdbc:mysql://www.mevur.me:3306/st_man?useUnicode=true&amp;characterEncoding=utf-8
+        </property>
+        <property name="connection.username">st_man</property>
+        <property name="connection.password">kele991146</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+        <property name="show_sql">true</property>
+        <property name="format_sql">true</property>
+        <property name="hibernate.current_session_context_class">thread</property>
+        <mapping class="model.Answer"/>
+        <mapping resource="model/Answer.hbm.xml"/>
+        <mapping class="model.Course"/>
+        <mapping resource="model/Course.hbm.xml"/>
+        <mapping class="model.Exp"/>
+        <mapping resource="model/Exp.hbm.xml"/>
+        <mapping class="model.School"/>
+        <mapping resource="model/School.hbm.xml"/>
+        <mapping class="model.Student"/>
+        <mapping resource="model/Student.hbm.xml"/>
+        <mapping class="model.StudentCourse"/>
+        <mapping resource="model/StudentCourse.hbm.xml"/>
+        <mapping class="model.StudentSignCourse"/>
+        <mapping resource="model/StudentSignCourse.hbm.xml"/>
+        <mapping class="model.Teacher"/>
+        <mapping resource="model/Teacher.hbm.xml"/>
+    </session-factory>
+
+</hibernate-configuration>

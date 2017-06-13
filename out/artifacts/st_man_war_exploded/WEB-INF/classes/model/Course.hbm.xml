@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="model.Course" table="course" schema="st_man">
+        <id name="id">
+            <column name="id" sql-type="int(11)"/>
+        </id>
+        <property name="name">
+            <column name="name" sql-type="text"/>
+        </property>
+        <property name="teacher">
+            <column name="teacher" sql-type="text"/>
+        </property>
+        <property name="location">
+            <column name="location" sql-type="text"/>
+        </property>
+        <property name="startDate">
+            <column name="start_date" sql-type="text"/>
+        </property>
+        <property name="endDate">
+            <column name="end_date" sql-type="text"/>
+        </property>
+        <property name="timeline">
+            <column name="timeline" sql-type="text"/>
+        </property>
+    </class>
+</hibernate-mapping>
