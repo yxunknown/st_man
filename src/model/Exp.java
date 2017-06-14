@@ -1,5 +1,8 @@
 package model;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import javax.persistence.Basic;
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -55,6 +58,16 @@ public class Exp {
         this.content = content;
     }
 
+    public JSONObject toJSON() throws JSONException {
+        JSONObject object = new JSONObject();
+        object.put("id", id);
+        object.put("teacher", teacher);
+        object.put("title", title);
+        object.put("content", content);
+        return object;
+
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -77,5 +90,15 @@ public class Exp {
         result = 31 * result + (title != null ? title.hashCode() : 0);
         result = 31 * result + (content != null ? content.hashCode() : 0);
         return result;
+    }
+
+    @Override
+    public String toString() {
+        try {
+            return toJSON().toString();
+        } catch (JSONException e) {
+            e.printStackTrace();
+            return super.toString();
+        }
     }
 }

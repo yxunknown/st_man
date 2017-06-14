@@ -7,6 +7,7 @@
     <class name="model.StudentSignCourse" table="student_sign_course" schema="st_man">
         <id name="id">
             <column name="id" sql-type="int(11)"/>
+            <generator class="increment"/>
         </id>
         <property name="student">
             <column name="student" sql-type="text"/>

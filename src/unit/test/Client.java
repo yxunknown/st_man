@@ -1,14 +1,19 @@
 package unit.test;
 
 import dao.StudentDao;
+import model.Student;
+import util.JsonUtil;
 
 /**
  * Created by mevur on 6/12/2017.
  */
 public class Client {
     public static void main(String[] args) {
-        StudentDao dao = new StudentDao();
-        dao.load("id=? and name=? and password=?", new String[]{"18996486935", "程飘", "loveyx.123"});
-
+        Student student = new Student();
+        student.setId("1234");
+        student.setName("name");
+        student.setPassword("sdawe");
+        student.setSchool("2");
+        JsonUtil.beanToJSONOBJ(student);
     }
 }
